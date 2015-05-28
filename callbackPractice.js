@@ -124,6 +124,18 @@ var uniq = function(arr, cb) {
   cb(newarr);
 }
 
+// Mentor solution
+
+var uniq = function(arr, cb) {
+  var uniqArr = [];
+  for(var i = 0; i < arr.length; i++) {
+    if (uniqArr.indexOf(arr[i]) === -1) {
+      uniqArr.push(arr[i]);
+    }
+  }
+  cb(uniqArr);
+}
+
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
